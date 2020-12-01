@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.0;netstandard2.1</TargetFrameworks>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Version>0.9</Version>
+    <Authors>sblom</Authors>
+    <Company />
+    <Product />
+    <PackageProjectUrl>https://github.com/sblom/LinqToRanges</PackageProjectUrl>
+    <PackageTags>linqpad-samples</PackageTags>
+  </PropertyGroup>
+
+  <ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.0'">
+    <PackageReference Include="IndexRange" Version="1.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\doc\linqpad-samples\**" Pack="True" PackagePath="linqpad-samples\">
+      <Visible>false</Visible>
+    </None>
+  </ItemGroup>
+
+</Project>
